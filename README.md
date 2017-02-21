@@ -16,3 +16,6 @@ This repository seeks to accomplish the following:
 * Deal with screen rotations, somehow.
 * Must look nice.
 * The app should not crash. The app should not generate any "Not responding" dialog messages.
+
+EXTRAS:
+* Threads that flash the buttons should not run while app is paused.
