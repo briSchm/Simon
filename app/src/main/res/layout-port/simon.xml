@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/sea">
+    android:background="@color/sea"
+    android:gravity="center">
 
     <TextView
         android:text="simon"
@@ -12,30 +13,30 @@
         android:layout_height="wrap_content"
         android:id="@+id/name"
         android:textAlignment="center"
-        android:textSize="36sp"
+        android:textSize="30sp"
         android:fontFamily="monospace"
         android:textColor="@android:color/black" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="165dp"
         android:layout_height="wrap_content"
         android:id="@+id/green"
-        android:background="@color/green" />
+        android:background="@color/green"/>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="166dp"
         android:layout_height="wrap_content"
         android:id="@+id/red"
         android:background="@color/red" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="167dp"
         android:layout_height="wrap_content"
         android:id="@+id/yellow"
         android:background="@color/yellow" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="168dp"
         android:layout_height="wrap_content"
         android:id="@+id/blue"
         android:background="@color/blue" />
@@ -43,22 +44,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <TextView
-            android:text="score:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="24dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="99dp"
-            android:id="@+id/score"
-            android:textSize="24sp"
-            android:fontFamily="casual"
-            android:textColor="@android:color/holo_orange_dark"
-            android:textStyle="normal|bold" />
 
         <TextView
             android:text="score"
@@ -84,6 +69,60 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:text="score:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:id="@+id/score"
+            android:textSize="24sp"
+            android:fontFamily="casual"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textStyle="normal|bold"
+            android:layout_alignTop="@+id/skill1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:text="skill level 1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/skill1"
+            android:layout_marginTop="29dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:text="skill level 2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/skill1"
+            android:layout_alignRight="@+id/skill1"
+            android:layout_alignEnd="@+id/skill1"
+            android:id="@+id/skill2"
+            android:layout_alignLeft="@+id/skill1"
+            android:layout_alignStart="@+id/skill1" />
+
+        <Button
+            android:text="skill level 3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/skill3"
+            android:layout_below="@+id/skill2"
+            android:layout_alignLeft="@+id/skill2"
+            android:layout_alignStart="@+id/skill2" />
+
+        <Button
+            android:text="skill level 4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/skill4"
+            android:layout_below="@+id/skill3"
+            android:layout_alignLeft="@+id/skill3"
+            android:layout_alignStart="@+id/skill3" />
     </RelativeLayout>
+
 
 </LinearLayout>

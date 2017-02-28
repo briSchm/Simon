@@ -15,6 +15,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        
+        <activity
+            android:name=".SimonGameActivity"
+            android:label="Simon Game"/>
 
+        <activity
+            android:name=".aboutActivity"
+            android:label="About"/>
+
+        <activity
+            android:name=".playerActivity"
+            android:label="Player Adds"/>
+
+        <activity
+            android:name=".colorActivity"
+            android:label="Choose Colors"/>
+
+        <activity
+            android:name=".simonSaysActivity"
+            android:label="Simon Says"/>
+    </application>
 </manifest>
