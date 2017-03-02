@@ -49,7 +49,7 @@
             android:text="score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/high_score"
+            android:id="@+id/game_score"
             android:fontFamily="casual"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="18sp"
@@ -122,6 +122,34 @@
             android:layout_below="@+id/skill3"
             android:layout_alignLeft="@+id/skill3"
             android:layout_alignStart="@+id/skill3" />
+
+        <TextView
+            android:text="high score:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/high_score"
+            android:textSize="24sp"
+            android:fontFamily="casual"
+            android:textColor="@color/darkpurple"
+            android:textStyle="normal|bold"
+            android:layout_alignBaseline="@+id/skill1"
+            android:layout_alignBottom="@+id/skill1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:text="score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/high"
+            android:textSize="18sp"
+            android:fontFamily="casual"
+            android:textColor="@color/red"
+            android:layout_below="@+id/score"
+            android:layout_alignRight="@+id/info"
+            android:layout_alignEnd="@+id/info"
+            android:layout_marginRight="33dp"
+            android:layout_marginEnd="33dp" />
     </RelativeLayout>
 
 
