@@ -13,5 +13,7 @@ public class colorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_color);
 
+
+
     }
 }
