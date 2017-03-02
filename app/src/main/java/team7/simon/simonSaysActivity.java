@@ -10,6 +10,8 @@ import android.view.View;
  * Created by brianaschmidt on 2/27/2017.
  */
 
+// Traditional Simon game.
+
 public class simonSaysActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

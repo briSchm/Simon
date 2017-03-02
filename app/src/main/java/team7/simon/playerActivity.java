@@ -10,6 +10,8 @@ import android.view.View;
  * Created by brianaschmidt on 2/27/2017.
  */
 
+// Multiplayer, where the current player adds the next sequence and passes it on.
+
 public class playerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
