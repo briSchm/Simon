@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.stop_imageButton).setOnClickListener(new StopListener()); /*when player hits the stop button*/
 
         Button b = (Button) findViewById(R.id.play);
-   /*     b.setOnClickListener(new View.OnClickListener() {
+        b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-*/
+
         b = (Button) findViewById(R.id.copyright);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
