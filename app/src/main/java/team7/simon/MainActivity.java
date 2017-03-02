@@ -13,9 +13,11 @@ import android.widget.Button;
  * Created by brianaschmidt on 2/27/2017.
  */
 
+//TODO: Currently if you hit pause, stop, pause, and then play again it won't work.
+
 public class MainActivity extends AppCompatActivity {
 
-    enum MediaState {NOT_READY, PLAYING, PAUSED, STOPPED}; /*media player features*/
+    enum MediaState {NOT_READY, PLAYING, PAUSED, STOPPED} /*media player features*/
 
     private MediaPlayer mediaPlayer;
     private MediaState mediaState;
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(
                         getApplicationContext(),
-                        SimonGameActivity.class /*when user presses the play button, it opens the SimonGameActivity*/
+                        SimonGameActivity.class //when user presses the play button, it opens the SimonGameActivity
                 );
                 startActivity(intent);
             }
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(
                         getApplicationContext(),
-                        aboutActivity.class /*when user presses the play button, it opens the aboutActivity*/
+                        aboutActivity.class //when user presses the play button, it opens the aboutActivity
                 );
                 startActivity(intent);
             }
@@ -57,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("http://www.hasbro.com/common/documents/3f4e2ca0206011ddbd0b0800200c9a66/620962835056900B10D1688756D7BA4A.pdf"); /*open in PDF viewer*/
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri); /*when user presses the info button, it opens the browser*/
+                Uri uri = Uri.parse("http://www.hasbro.com/common/documents/3f4e2ca0206011ddbd0b0800200c9a66/620962835056900B10D1688756D7BA4A.pdf"); //open in PDF viewer
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri); //when user presses the info button, it opens the browser
                 startActivity(intent);
             }
         });
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(
                         getApplicationContext(),
-                        simonSaysActivity.class /*when user presses the version1 button, it opens the simonSaysActivity*/
+                        simonSaysActivity.class //when user presses the version1 button, it opens the simonSaysActivity
                 );
                 startActivity(intent);
             }
@@ -81,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(
                         getApplicationContext(),
-                        playerActivity.class /*when user presses the version2 button, it opens the playerActivity*/
+                        playerActivity.class //when user presses the version2 button, it opens the playerActivity
                 );
                 startActivity(intent);
             }
@@ -93,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(
                         getApplicationContext(),
-                        colorActivity.class /*when user presses the version3 button, it opens the SimonGameActivity*/
+                        colorActivity.class //when user presses the version3 button, it opens the SimonGameActivity
                 );
                 startActivity(intent);
             }
@@ -113,20 +115,20 @@ public class MainActivity extends AppCompatActivity {
         if (mediaPlayer != null) {
             mediaPlayer.release();
             mediaPlayer = null;
-            mediaState = MediaState.NOT_READY; /*when user opens outside the app, for example with a phone call; the audio stops*/
+            mediaState = MediaState.NOT_READY; //when user opens outside the app, for example with a phone call; the audio stops
         }
     }
 
     @Override
     protected void onResume() {
-        super.onResume(); /*audio plays again*/
+        super.onResume(); //audio plays again
         playAudio();
     }
 
     class StartListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
-            playAudio(); /*when the audio starts, it should play*/
+            playAudio(); //when the audio starts, it should play
         }
     }
 
@@ -135,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             if (mediaPlayer != null) {
                 mediaPlayer.pause();
-                mediaState = MediaState.PAUSED; /*when audio is paused, it should pause*/
+                mediaState = MediaState.PAUSED; //when audio is paused, it should pause
             }
         }
     }
@@ -143,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
     class StopListener implements  View.OnClickListener {
         @Override
         public void onClick(View v) {
-            stopAudio(); /*when audio is stopped, it shouldn't play*/
+            stopAudio(); //when audio is stopped, it shouldn't play
         }
     }
 
@@ -152,8 +154,8 @@ public class MainActivity extends AppCompatActivity {
             mediaState = MediaState.NOT_READY;
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(),
-                    R.raw.out_of_time); /*gets the mp3 file*/
-            mediaPlayer.setLooping(true); /*begins to loop the file*/
+                    R.raw.out_of_time); //gets the mp3 file
+            mediaPlayer.setLooping(true); //begins to loop the file
 
             mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 @Override
@@ -161,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.i("Music:", "---------------- ready to play");
 
                     mediaPlayer.start();
-                    mediaState = MediaState.PLAYING; /*begins playing music*/
+                    mediaState = MediaState.PLAYING; //begins playing music
                 }
             });
 

@@ -10,6 +10,9 @@ import android.view.View;
  * Created by brianaschmidt on 2/27/2017.
  */
 
+//Multiplayer, where multiple players choose one color/button, and only press it when that button
+// flashes on the sequence. Simon builds the sequence in fours. Max will be ten sequences of four.
+
 public class colorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -12,6 +12,8 @@ import android.widget.TextView;
  * Created by brianaSchmidt on 2/27/2017.
  */
 
+//Give the sequence at full from the start, player repeats, simon does a new full sequence.
+
 public class SimonGameActivity extends AppCompatActivity {
 
     @Override
