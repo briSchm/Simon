@@ -45,20 +45,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:text="score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/game_score"
-            android:fontFamily="casual"
-            android:textColor="@android:color/holo_green_dark"
-            android:textSize="18sp"
-            android:layout_below="@+id/score"
-            android:layout_alignLeft="@+id/score"
-            android:layout_alignStart="@+id/score"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp" />
-
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -71,57 +57,71 @@
             android:layout_alignParentEnd="true" />
 
         <TextView
-            android:text="score:"
+            android:text="score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="22dp"
-            android:layout_marginStart="22dp"
-            android:id="@+id/score"
-            android:textSize="24sp"
+            android:id="@+id/high"
+            android:textSize="18sp"
             android:fontFamily="casual"
-            android:textColor="@android:color/holo_orange_dark"
-            android:textStyle="normal|bold"
-            android:layout_alignTop="@+id/skill1"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <Button
-            android:text="skill level 1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/skill1"
-            android:layout_marginTop="29dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
-
-        <Button
-            android:text="skill level 2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/skill1"
-            android:layout_alignRight="@+id/skill1"
-            android:layout_alignEnd="@+id/skill1"
-            android:id="@+id/skill2"
-            android:layout_alignLeft="@+id/skill1"
-            android:layout_alignStart="@+id/skill1" />
-
-        <Button
-            android:text="skill level 3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/skill3"
-            android:layout_below="@+id/skill2"
-            android:layout_alignLeft="@+id/skill2"
-            android:layout_alignStart="@+id/skill2" />
+            android:textColor="@color/red"
+            android:layout_marginRight="33dp"
+            android:layout_marginEnd="33dp"
+            android:layout_alignBaseline="@+id/game_score"
+            android:layout_alignBottom="@+id/game_score"
+            android:layout_alignRight="@+id/info"
+            android:layout_alignEnd="@+id/info" />
 
         <Button
             android:text="skill level 4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/skill4"
-            android:layout_below="@+id/skill3"
-            android:layout_alignLeft="@+id/skill3"
-            android:layout_alignStart="@+id/skill3" />
+            android:layout_below="@+id/game_score"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text="score:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:layout_marginStart="27dp"
+            android:id="@+id/score"
+            android:textSize="24sp"
+            android:fontFamily="casual"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textStyle="normal|bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="35dp" />
+
+        <TextView
+            android:text="score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/game_score"
+            android:fontFamily="casual"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="18sp"
+            android:layout_marginRight="11dp"
+            android:layout_marginEnd="11dp"
+            android:layout_below="@+id/score"
+            android:layout_alignRight="@+id/score"
+            android:layout_alignEnd="@+id/score" />
+
+        <TextView
+            android:text="high score:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/high_score"
+            android:textSize="24sp"
+            android:fontFamily="casual"
+            android:textColor="@color/darkpurple"
+            android:textStyle="normal|bold"
+            android:layout_above="@+id/high"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
     </RelativeLayout>
 
 

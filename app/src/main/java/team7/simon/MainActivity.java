@@ -9,6 +9,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * Created by brianaschmidt on 2/27/2017.
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     enum MediaState {NOT_READY, PLAYING, PAUSED, STOPPED}; /*media player features*/
