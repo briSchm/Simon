@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 /**
- * Created by brianaSchmidt- on 2/27/2017.
+ * Created by brianaSchmidt on 2/27/2017.
  */
 
 public class SimonGameActivity extends AppCompatActivity {

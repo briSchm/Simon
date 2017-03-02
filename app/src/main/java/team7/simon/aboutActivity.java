@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebView;
 
 /**
- * Created by bri1- on 2/27/2017.
+ * Created by brianaschmidt on 2/27/2017.
  */
 
 public class aboutActivity extends AppCompatActivity {
