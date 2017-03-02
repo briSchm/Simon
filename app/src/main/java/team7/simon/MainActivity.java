@@ -13,6 +13,8 @@ import android.widget.Button;
  * Created by brianaschmidt on 2/27/2017.
  */
 
+//TODO: Currently if you hit pause, stop, pause, and then play again it won't work.
+
 public class MainActivity extends AppCompatActivity {
 
     enum MediaState {NOT_READY, PLAYING, PAUSED, STOPPED} /*media player features*/
