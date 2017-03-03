@@ -1,5 +1,7 @@
 package team7.simon;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.media.AudioAttributes;
 import android.media.SoundPool;
 import android.os.AsyncTask;
@@ -11,7 +13,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
@@ -30,7 +31,7 @@ public class simonSaysActivity extends AppCompatActivity {
 
     private boolean player = false;
 
-    private final static int HIGH_SCORE = 0;
+    private int HIGH_SCORE;
 
     private int score = 0;
 
@@ -51,6 +52,22 @@ public class simonSaysActivity extends AppCompatActivity {
         findViewById(R.id.info).setOnClickListener(new AboutListener()); //set listener for info
 
         sounds = new HashSet<Integer>();
+
+        highScore = (TextView) findViewById(R.id.high);
+        currentScore = (TextView) findViewById(R.id.game_score);
+        currentScore.setText(Integer.toString(score));
+
+        SharedPreferences prefs = this.getSharedPreferences("myfinalPrefs",
+                Context.MODE_PRIVATE);
+        HIGH_SCORE = prefs.getInt("score", 0);
+
+        if (HIGH_SCORE > score) {
+            highScore.setText(Integer.toString(HIGH_SCORE));
+        } else {
+            HIGH_SCORE = score;
+            highScore.setText(Integer.toString(HIGH_SCORE));
+            prefs.edit().putInt("score", HIGH_SCORE).apply();
+        }
     }
 
     private class Pattern {
