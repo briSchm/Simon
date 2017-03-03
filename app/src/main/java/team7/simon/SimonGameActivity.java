@@ -1,15 +1,21 @@
 package team7.simon;
 
+import android.media.AudioAttributes;
+import android.media.SoundPool;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 import java.util.Vector;
 
 /**
@@ -34,6 +40,10 @@ public class SimonGameActivity extends AppCompatActivity {
 
     private TextView currentScore, highScore;
 
+    private SoundPool soundPool;
+
+    private Set<Integer> sounds;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +52,7 @@ public class SimonGameActivity extends AppCompatActivity {
         findViewById(R.id.start).setOnClickListener(new StartGameListener());
         findViewById(R.id.info).setOnClickListener(new AboutListener()); //set listener for info
 
+        sounds = new HashSet<Integer>();
     }
 
     private class Pattern {
@@ -91,6 +102,85 @@ public class SimonGameActivity extends AppCompatActivity {
 
             AlertDialog dialog = builder.create();
             dialog.show();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        greenB = (Button) findViewById(R.id.green);
+        redB = (Button) findViewById(R.id.red);
+        blueB = (Button) findViewById(R.id.blue);
+        yellowB = (Button) findViewById(R.id.yellow);
+
+        AudioAttributes.Builder attrBuilder = new AudioAttributes.Builder();
+        attrBuilder.setUsage(AudioAttributes.USAGE_GAME);
+
+        SoundPool.Builder spBuilder = new SoundPool.Builder();
+        spBuilder.setAudioAttributes(attrBuilder.build());
+        spBuilder.setMaxStreams(4);
+        soundPool = spBuilder.build();
+
+        soundPool.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
+            @Override
+            public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
+                if (status == 0) { // success
+                    sounds.add(sampleId);
+                    Log.i("SOUND", "Sound loaded " + sampleId);
+                } else {
+                    Log.i("SOUND", "Error cannot load sound status = " + status);
+                }
+            }
+        });
+
+        final int PianoGreenID = soundPool.load(this, R.raw.f_6, 1);
+        greenB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playSound(PianoGreenID);
+            }
+        });
+
+        final int PianoRedId = soundPool.load(this, R.raw.f_4, 1);
+        redB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playSound(PianoRedId);
+            }
+        });
+
+        final int PianoYellowId = soundPool.load(this, R.raw.f_3, 1);
+        yellowB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playSound(PianoYellowId);
+            }
+        });
+
+        final int PianoBlueId = soundPool.load(this, R.raw.d_7, 1);
+        blueB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playSound(PianoBlueId);
+            }
+        });
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (soundPool != null) {
+            soundPool.release();
+            soundPool = null;
+
+            sounds.clear();
+        }
+    }
+
+    private void playSound(int soundId) {
+        if (sounds.contains(soundId)) {
+            soundPool.play(soundId, 1.0f, 1.0f, 0, 0, 1.0f);
         }
     }
 }
