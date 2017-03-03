@@ -81,47 +81,21 @@
             android:fontFamily="casual"
             android:textColor="@android:color/holo_orange_dark"
             android:textStyle="normal|bold"
-            android:layout_alignTop="@+id/skill1"
+            android:layout_alignTop="@+id/start"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
         <Button
-            android:text="skill level 1"
+            android:id="@+id/start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/skill1"
-            android:layout_marginTop="29dp"
+            android:layout_marginTop="76dp"
+            android:text="start"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
-
-        <Button
-            android:text="skill level 2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/skill1"
-            android:layout_alignRight="@+id/skill1"
-            android:layout_alignEnd="@+id/skill1"
-            android:id="@+id/skill2"
-            android:layout_alignLeft="@+id/skill1"
-            android:layout_alignStart="@+id/skill1" />
-
-        <Button
-            android:text="skill level 3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/skill3"
-            android:layout_below="@+id/skill2"
-            android:layout_alignLeft="@+id/skill2"
-            android:layout_alignStart="@+id/skill2" />
-
-        <Button
-            android:text="skill level 4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/skill4"
-            android:layout_below="@+id/skill3"
-            android:layout_alignLeft="@+id/skill3"
-            android:layout_alignStart="@+id/skill3" />
+            android:layout_toLeftOf="@+id/high_score"
+            android:layout_toStartOf="@+id/high_score"
+            android:layout_marginRight="33dp"
+            android:layout_marginEnd="33dp" />
 
         <TextView
             android:text="high score:"
@@ -132,7 +106,7 @@
             android:fontFamily="casual"
             android:textColor="@color/darkpurple"
             android:textStyle="normal|bold"
-            android:layout_alignBottom="@+id/skill1"
+            android:layout_alignBottom="@+id/start"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/score" />

@@ -72,12 +72,12 @@
             android:layout_alignEnd="@+id/info" />
 
         <Button
-            android:text="skill level 4"
+            android:id="@+id/start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/skill4"
-            android:layout_below="@+id/game_score"
-            android:layout_centerHorizontal="true" />
+            android:layout_below="@+id/high_score"
+            android:layout_centerHorizontal="true"
+            android:text="start" />
 
         <TextView
             android:text="score:"
