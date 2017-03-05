@@ -54,7 +54,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:visibility="invisible"
-            app:srcCompat="@drawable/numberone" />
+            app:srcCompat="@drawable/go" />
 
         <Button
             android:id="@+id/start"
