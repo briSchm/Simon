@@ -1,49 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sea"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
     <TextView
-        android:text="simon"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/name"
-        android:textAlignment="center"
-        android:textSize="30sp"
         android:fontFamily="monospace"
-        android:textColor="@android:color/black" />
+        android:text="simon"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
 
-    <Button
-        android:layout_width="165dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/green"
-        android:background="@color/green"/>
+    <ImageButton
+        android:id="@+id/green_button"
+        android:layout_width="370dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/green_button" />
 
-    <Button
-        android:layout_width="166dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/red"
-        android:background="@color/red" />
+    <ImageButton
+        android:id="@+id/blue_button"
+        android:layout_width="370dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/blue_button" />
 
-    <Button
-        android:layout_width="167dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/yellow"
-        android:background="@color/yellow" />
+    <ImageButton
+        android:id="@+id/red_button"
+        android:layout_width="370dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/red_button" />
 
-    <Button
-        android:layout_width="168dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/blue"
-        android:background="@color/blue" />
+    <ImageButton
+        android:id="@+id/yellow_button"
+        android:layout_width="370dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/yellow_button" />
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/numberone" />
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="24dp"
+            android:text="start" />
 
         <TextView
             android:id="@+id/game_score"
@@ -55,7 +76,6 @@
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
             android:fontFamily="casual"
-            android:text="score"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="18sp" />
 
@@ -85,18 +105,6 @@
             android:textSize="24sp"
             android:textStyle="normal|bold" />
 
-        <Button
-            android:id="@+id/start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginTop="66dp"
-            android:layout_toLeftOf="@+id/high_score"
-            android:layout_toStartOf="@+id/high_score"
-            android:text="start" />
-
         <TextView
             android:id="@+id/high_score"
             android:layout_width="wrap_content"
@@ -121,9 +129,19 @@
             android:layout_marginEnd="33dp"
             android:layout_marginRight="33dp"
             android:fontFamily="casual"
-            android:text="score"
             android:textColor="@color/red"
             android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/game_over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/info"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
     </RelativeLayout>
 
 
