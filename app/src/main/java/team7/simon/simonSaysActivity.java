@@ -420,10 +420,10 @@ public class simonSaysActivity extends AppCompatActivity implements View.OnClick
         });
 
         // Load sounds
-        sound_oneID = soundPool.load(this, R.raw.d_3, 1);
-        sound_twoID = soundPool.load(this, R.raw.d_4, 1);
-        sound_threeID = soundPool.load(this, R.raw.d_5, 1);
-        sound_fourID = soundPool.load(this, R.raw.d_6, 1);
+        sound_oneID = soundPool.load(this, R.raw.f_6, 1);
+        sound_twoID = soundPool.load(this, R.raw.f_5, 1);
+        sound_threeID = soundPool.load(this, R.raw.f_4, 1);
+        sound_fourID = soundPool.load(this, R.raw.f_3, 1);
 
         delay = true;
 
