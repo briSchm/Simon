@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -26,7 +27,9 @@ import java.util.TimerTask;
  * Created by brianaschmidt on 2/27/2017.
  */
 
-// Extreme mode where the player has to memorize the button
+// Extreme mode where the player has to memorize the button.
+
+    //TODO: Make it to where it only shows the latest button in the sequence.
 
 public class playerActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -103,7 +106,7 @@ public class playerActivity extends AppCompatActivity implements View.OnClickLis
                     "<h2>How to play: </h2>" +
                     "<p>Repeat the ever-increasing sequence that SIMON generates.</p><br>" +
                     "<p>Click the start button</p><br>" +
-                    "<p>Simon show only the last addition to pattern, and you must keep up.</p><br>" +
+                    "<p>Simon show only the last addition to pattern, and you must keep track.</p><br>" +
                     "<p>To play a new game just click the start button.</p>" + "</html>";
             AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
             builder.setMessage(Html.fromHtml(message));
@@ -136,11 +139,11 @@ public class playerActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void setUpSequence() {
-        if (!lost) {
-            for (int i = 0; i < currentSequence; i++) {
-                // sequence[i] = rnd.nextInt(4) + 1;
-            }
-        }
+//        if (!lost) {
+//            for (int i = 0; i < currentSequence; i++) {
+//                 sequence[i] = rnd.nextInt(4) + 1;
+//            }
+//        }
         sequence[currentSequence] = rnd.nextInt(4) + 1;
 
         currentSequence++;
@@ -178,9 +181,9 @@ public class playerActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    private void playNextGame() {
+    private void playNextGame() {           //I think this is the method that flashes the buttons?
         if (sequence[currCycle] > 0) {
-            switch (sequence[currCycle]) {
+            switch (sequence[currentSequence-1]) {
                 case 1:
                     currCycle++;
                     currIM = R.id.green_button;
@@ -415,10 +418,10 @@ public class playerActivity extends AppCompatActivity implements View.OnClickLis
         });
 
         // Load sounds
-        sound_oneID = soundPool.load(this, R.raw.d_3, 1);
-        sound_twoID = soundPool.load(this, R.raw.d_4, 1);
-        sound_threeID = soundPool.load(this, R.raw.d_5, 1);
-        sound_fourID = soundPool.load(this, R.raw.d_6, 1);
+        sound_oneID = soundPool.load(this, R.raw.a_3, 1);
+        sound_twoID = soundPool.load(this, R.raw.a_4, 1);
+        sound_threeID = soundPool.load(this, R.raw.a_5, 1);
+        sound_fourID = soundPool.load(this, R.raw.a_6, 1);
 
         delay = true;
 
