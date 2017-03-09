@@ -27,7 +27,7 @@ import java.util.TimerTask;
 
 //Traditional Simon game.
 
-    //BUGS
+    //BUGS (Applies to all Simon Activities)
         //Simon will consider it a game over if you press the next button in the sequence before
         //the sounds/button flash finishes.
 
@@ -143,11 +143,11 @@ public class SimonGameActivity extends AppCompatActivity implements View.OnClick
     }
 
     private void setUpSequence() {
-        if (!lost) {
-            for (int i = 0; i < currentSequence; i++) {
-               // sequence[i] = rnd.nextInt(4) + 1;
-            }
-        }
+//        if (!lost) {                  //Actually causes the sequence to be redone each turn instead of each new game.
+//            for (int i = 0; i < currentSequence; i++) {
+//                sequence[i] = rnd.nextInt(4) + 1;
+//            }
+//        }
         sequence[currentSequence] = rnd.nextInt(4) + 1;
 
         currentSequence++;

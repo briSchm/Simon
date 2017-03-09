@@ -98,38 +98,25 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="player adds"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/version2"
-        android:fontFamily="serif-monospace"
-        android:textSize="24sp"
-        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/version1"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:fontFamily="serif-monospace"
+        android:text="simon EX"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp" />
 
     <Button
-        android:text="Simon says"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/version1"
-        android:fontFamily="serif-monospace"
-        android:textSize="24sp"
-        android:textColor="#f7b124"
-        android:layout_below="@+id/info"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="choose your color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/version3"
-        android:textSize="24sp"
+        android:layout_below="@+id/info"
+        android:layout_centerHorizontal="true"
         android:fontFamily="serif-monospace"
-        android:textColor="@color/darkpurple"
-        android:layout_below="@+id/version2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="39dp"
-        android:layout_marginStart="39dp" />
+        android:text="Simon Hard"
+        android:textColor="#f7b124"
+        android:textSize="24sp" />
+
 </RelativeLayout>

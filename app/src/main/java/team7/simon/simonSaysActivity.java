@@ -76,7 +76,7 @@ public class simonSaysActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.simon_says);
+        setContentView(R.layout.player_adds);
 
         findViewById(R.id.info).setOnClickListener(new AboutListener()); //set listener for info
 
@@ -290,9 +290,9 @@ public class simonSaysActivity extends AppCompatActivity implements View.OnClick
 
     private void newGame(){
         PauseForPlayer();
-        for(int i =0; i < currentSequence; i++){
-            sequence[i] = 0;
-        }
+//        for(int i =0; i < currentSequence; i++){
+//            sequence[i] = 0;
+//        }
         TextView tv =(TextView) findViewById(R.id.game_score);
         tv.setText(String.valueOf(0));
         tv = (TextView)findViewById(R.id.game_over);
