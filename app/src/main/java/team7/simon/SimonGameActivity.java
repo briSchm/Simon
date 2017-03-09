@@ -27,6 +27,10 @@ import java.util.TimerTask;
 
 //Traditional Simon game.
 
+    //BUGS
+        //Simon will consider it a game over if you press the next button in the sequence before
+        //the sounds/button flash finishes.
+
 public class SimonGameActivity extends AppCompatActivity implements View.OnClickListener {
 
     // button delay
