@@ -106,7 +106,7 @@ public class playerActivity extends AppCompatActivity implements View.OnClickLis
                     "<h2>How to play: </h2>" +
                     "<p>Repeat the ever-increasing sequence that SIMON generates.</p><br>" +
                     "<p>Click the start button</p><br>" +
-                    "<p>Simon show only the last addition to pattern, and you must keep track.</p><br>" +
+                    "<p>Simon show only the last addition to pattern, you must keep track and keep patience!</p><br>" +
                     "<p>To play a new game just click the start button.</p>" + "</html>";
             AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
             builder.setMessage(Html.fromHtml(message));
@@ -183,7 +183,7 @@ public class playerActivity extends AppCompatActivity implements View.OnClickLis
 
     private void playNextGame() {           //I think this is the method that flashes the buttons?
         if (sequence[currCycle] > 0) {
-            switch (sequence[currentSequence-1]) {
+            switch (sequence[currentSequence-1]) {  //With currentSequence-1, only flashes the latest in sequence.
                 case 1:
                     currCycle++;
                     currIM = R.id.green_button;
