@@ -285,9 +285,9 @@ public class SimonGameActivity extends AppCompatActivity implements View.OnClick
 
     private void newGame(){
         PauseForPlayer();
-        for(int i =0; i < currentSequence; i++){
-            sequence[i] = 0;
-        }
+        //for(int i =0; i < currentSequence; i++){ //Doesn't seem to do anything
+        //    sequence[i] = 0;
+        //}
         TextView tv =(TextView) findViewById(R.id.game_score);
         tv.setText(String.valueOf(0));
         tv = (TextView)findViewById(R.id.game_over);
