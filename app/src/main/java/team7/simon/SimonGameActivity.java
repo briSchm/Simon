@@ -31,6 +31,9 @@ import java.util.TimerTask;
         //Simon will consider it a game over if you press the next button in the sequence before
         //the sounds/button flash finishes.
 
+        //Need to implement a onbackbuttonpress method thing to save the highscore. Also need to
+        // figure out how to load in the highscore when the game starts.
+
 public class SimonGameActivity extends AppCompatActivity implements View.OnClickListener {
 
     // button delay
