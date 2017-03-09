@@ -8,14 +8,14 @@
     android:gravity="center">
 
     <TextView
-        android:text="simon says"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/name"
-        android:textAlignment="center"
-        android:textSize="30sp"
         android:fontFamily="monospace"
-        android:textColor="@android:color/black" />
+        android:text="Simon Hard"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
 
     <ImageButton
         android:id="@+id/green_button"

@@ -29,10 +29,6 @@
             android:label="Player Adds"/>
 
         <activity
-            android:name=".colorActivity"
-            android:label="Choose Colors"/>
-
-        <activity
             android:name=".simonSaysActivity"
             android:label="Simon Says"/>
     </application>

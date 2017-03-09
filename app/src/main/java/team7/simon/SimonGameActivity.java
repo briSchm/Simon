@@ -27,6 +27,13 @@ import java.util.TimerTask;
 
 //Traditional Simon game.
 
+    //BUGS (Applies to all Simon Activities)
+        //Simon will consider it a game over if you press the next button in the sequence before
+        //the sounds/button flash finishes.
+
+        //Need to implement a onbackbuttonpress method thing to save the highscore. Also need to
+        // figure out how to load in the highscore when the game starts.
+
 public class SimonGameActivity extends AppCompatActivity implements View.OnClickListener {
 
     // button delay
@@ -101,7 +108,7 @@ public class SimonGameActivity extends AppCompatActivity implements View.OnClick
             /*Message in AlertDialog box when user clicks the info button*/
             String message = "<html>" +
                     "<h2>How to play: </h2>" +
-                    "<p>Repeat the ever-increasing random signals that SIMON generates.</p><br>" +
+                    "<p>Repeat the ever-increasing sequence that SIMON generates.</p><br>" +
                     "<p>Click the start button</p><br>" +
                     "<p>Simon will show the pattern, and you repeat it</p><br>" +
                     "<p>To play a new game just click the start button.</p>" + "</html>";
@@ -136,11 +143,11 @@ public class SimonGameActivity extends AppCompatActivity implements View.OnClick
     }
 
     private void setUpSequence() {
-        if (!lost) {
-            for (int i = 0; i < currentSequence; i++) {
-                sequence[i] = rnd.nextInt(4) + 1;
-            }
-        }
+//        if (!lost) {                  //Actually causes the sequence to be redone each turn instead of each new game.
+//            for (int i = 0; i < currentSequence; i++) {
+//                sequence[i] = rnd.nextInt(4) + 1;
+//            }
+//        }
         sequence[currentSequence] = rnd.nextInt(4) + 1;
 
         currentSequence++;
@@ -285,9 +292,9 @@ public class SimonGameActivity extends AppCompatActivity implements View.OnClick
 
     private void newGame(){
         PauseForPlayer();
-        for(int i =0; i < currentSequence; i++){
-            sequence[i] = 0;
-        }
+        //for(int i =0; i < currentSequence; i++){ //Doesn't seem to do anything
+        //    sequence[i] = 0;
+        //}
         TextView tv =(TextView) findViewById(R.id.game_score);
         tv.setText(String.valueOf(0));
         tv = (TextView)findViewById(R.id.game_over);
