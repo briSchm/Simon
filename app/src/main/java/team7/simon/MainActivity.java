@@ -88,18 +88,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-//        b = (Button) findViewById(R.id.version3);
-//        b.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(
-//                        getApplicationContext(),
-//                        colorActivity.class //when user presses the version3 button, it opens the SimonGameActivity
-//                );
-//                startActivity(intent);
-//            }
-//        });
     }
 
     @Override
