@@ -138,7 +138,7 @@ public class SimonGameActivity extends AppCompatActivity implements View.OnClick
     private void setUpSequence() {
         if (!lost) {
             for (int i = 0; i < currentSequence; i++) {
-                sequence[i] = rnd.nextInt(4) + 1;
+               // sequence[i] = rnd.nextInt(4) + 1;
             }
         }
         sequence[currentSequence] = rnd.nextInt(4) + 1;
