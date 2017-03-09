@@ -149,9 +149,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onPrepared(MediaPlayer mp) {
                     Log.i("Music:", "---------------- ready to play");
-                    //TODO: Uncomment this when done with testing.
-                    //mediaPlayer.start();
-                    //mediaState = MediaState.PLAYING; //begins playing music
+                    mediaPlayer.start();
+                    mediaState = MediaState.PLAYING; //begins playing music
                 }
             });
 
