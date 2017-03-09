@@ -106,7 +106,7 @@ public class simonSaysActivity extends AppCompatActivity implements View.OnClick
             /*Message in AlertDialog box when user clicks the info button*/
             String message = "<html>" +
                     "<h2>How to play: </h2>" +
-                    "<p>Repeat the ever-increasing random signals that SIMON generates.</p><br>" +
+                    "<p>Repeat the ever-increasing random sequences that SIMON generates.</p><br>" +
                     "<p>Click the start button</p><br>" +
                     "<p>Simon will show the pattern, and you repeat it</p><br>" +
                     "<p>To play a new game just click the start button.</p>" + "</html>";
